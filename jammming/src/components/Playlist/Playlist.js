@@ -7,7 +7,7 @@ const Playlist = (props) => {
   const handleNameChange = useCallback(
     (event) => {
       props.onNameChange(event.target.value);
-    }, // eslint-disable-next-line
+    }, 
     [props.onNameChange]
   );
 

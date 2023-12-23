@@ -1,28 +1,48 @@
-import React from 'react';
-import styles from './Track.module.css';
+import React, { useCallback } from "react";
 
-const track = {
-  artist: "Taylor Swift",
-  name: "All too well",
-  album: "red",
-  ICR: 45,
-}
+import "./Track.css";
 
-const Track = () => {
+const Track = (props) => {
+  const addTrack = useCallback(
+    (event) => {
+      props.onAdd(props.track);
+    },
+    [props.onAdd, props.track]
+  );
+
+  const removeTrack = useCallback(
+    (event) => {
+      props.onRemove(props.track);
+    },
+    [props.onRemove, props.track]
+  );
+
+  const renderAction = () => {
+    if (props.isRemoval) {
+      return (
+        <button className="Track-action" onClick={removeTrack}>
+          -
+        </button>
+      );
+    }
+    return (
+      <button className="Track-action" onClick={addTrack}>
+        +
+      </button>
+    );
+  };
+
   return (
-    <div className={styles.Track}>
-      <div className={styles.TrackInformation}>
-        <div className={styles.TrackArtist}>
-          <p>{track.artist}</p>
-          <p>{track.name}</p>
-        </div>
-        <div className={styles.TrackAlbum}>
-          <p>{track.album}</p>
-          <h3>{`${track.ICR} #`}</h3>
-        </div>
+    <div className="Track">
+      <div className="Track-information">
+        <h3>{props.track.name}</h3>
+        <p>
+          {props.track.artist} | {props.track.album}
+        </p>
       </div>
+      {renderAction()}
     </div>
   );
-}
+};
 
 export default Track;
