@@ -1,0 +1,47 @@
+.Track {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16.66rem;
+  margin: 0 0.5rem 2.3rem 0.5rem;
+}
+
+.BusinessInformation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.TrackArtist p {
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1rem;
+  margin: 0;
+}
+
+.TrackAlbum h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.BusinessAddress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.BusinessReviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.BusinessReviews h3 {
+  color: #cca353;
+  
+}
+
+.BusinessReviews .rating {
+  font-size: 0.88rem;
+  line-height: 1rem;
+}
