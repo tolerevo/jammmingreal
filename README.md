@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59fc1589-40ab-441a-9796-1327036c9c27/deploy-status)](https://app.netlify.com/sites/jamazing/deploys)
 # Jammming The interactive Songlist maker
 
 ## Getting Started with Create React App
